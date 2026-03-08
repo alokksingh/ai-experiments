@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Etter | SVP, Adobe.com — Product & Growth Executive</title>
+<link rel="preconnect" href="https://use.typekit.net">
+<style>
+/* ── RESET & BASE ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: adobe-clean, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+  font-size: 16px;
+  color: #2c2c2c;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── ADOBE GLOBAL NAV ─────────────────────────── */
+.gnav {
+  background: #000;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.gnav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.gnav-logo svg { width: 34px; height: 26px; }
+.gnav-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  height: 64px;
+  align-items: center;
+}
+.gnav-links > li > a, .gnav-links > li > button {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 14px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  gap: 4px;
+}
+.gnav-links > li > a:hover, .gnav-links > li > button:hover { color: #fff; }
+.gnav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.gnav-btn {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.gnav-btn:hover { color: #fff; }
+.gnav-btn-outline {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.gnav-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.gnav-divider { width: 1px; height: 24px; background: rgba(255,255,255,0.2); margin: 0 12px; }
+
+/* ── HEADER ───────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 199;
+}
+
+/* ── PRODUCT SUB-NAV ──────────────────────────── */
+.pnav {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 0;
+}
+
+.pnav-product {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 20px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+.pnav-product-icon {
+  width: 20px; height: 20px;
+  background: linear-gradient(135deg,#001E8C,#1473E6);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800; color: #fff;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+.pnav-product-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c2c2c;
+  white-space: nowrap;
+}
+/* Thin separator between root and tabs */
+.pnav-sep {
+  width: 1px;
+  height: 20px;
+  background: #e1e1e1;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+.pnav-tabs {
+  display: flex;
+  list-style: none;
+  height: 48px;
+  align-items: center;
+  gap: 0;
+}
+.pnav-tabs a {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #767676;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.pnav-tabs a:hover { color: #2c2c2c; }
+.pnav-tabs a.active { color: #2c2c2c; font-weight: 600; border-bottom-color: #2c2c2c; }
+
+/* ── HERO ─────────────────────────────────────── */
+.hero {
+  background: #060810;
+  overflow: hidden;
+}
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 72px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-text { /* left column */ }
+.hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.hero-product-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.hero-product-icon {
+  width: 32px; height: 32px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #001E8C 0%, #0550C2 50%, #1473E6 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; color: #fff;
+  letter-spacing: -0.5px;
+}
+.hero-product-label span {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #fff;
+  max-width: 580px;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+.hero-body {
+  font-size: 18px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  max-width: 500px;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.hero-price {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: #1473E6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.btn-blue:hover { background: #0d66d0; }
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+.hero-sub-links {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.hero-sub-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: underline;
+}
+.hero-sub-links a:hover { color: #fff; }
+
+
+/* ── FEATURE SECTIONS ─────────────────────────── */
+.feature {
+  padding: 96px 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.feature.reverse { flex-direction: row-reverse; }
+.feature-text { flex: 1; min-width: 0; }
+.feature-media { flex: 1; min-width: 0; }
+.feature-media img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+.feature-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #747474;
+  margin-bottom: 16px;
+}
+.feature h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2c2c2c;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.feature-body {
+  font-size: 18px;
+  color: #4b4b4b;
+  line-height: 1.7;
+  font-weight: 400;
+  max-width: 480px;
+}
+.feature-divider {
+  height: 1px;
+  background: #e1e1e1;
+  margin: 0;
+}
+
+/* ── CAROUSEL SECTION ─────────────────────────── */
+.carousel-section {
+  padding: 96px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.carousel-section h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.carousel-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.carousel-card:hover { transform: translateY(-3px); }
+.carousel-card img, .carousel-card-img {
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+  gap: 0;
+  overflow: hidden;
+}
+.carousel-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.carousel-card p {
+  font-size: 14px;
+  color: #6e6e6e;
+  line-height: 1.6;
+}
+
+
+
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1473E6;
+  text-decoration: none;
+  margin-top: 32px;
+  transition: gap 0.2s;
+}
+.view-all-link:hover { gap: 10px; text-decoration: underline; }
+
+/* ── PLANS SECTION ────────────────────────────── */
+.plans-outer {
+  background: linear-gradient(to top, rgb(20,115,230) 0%, rgb(20,115,230) 20%, rgb(145,189,242) 40%, rgb(217,233,249) 60%, rgb(255,255,255) 100%);
+  padding: 96px 40px;
+}
+.plans-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.plans-label {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #747474;
+  margin-bottom: 8px;
+}
+.plans-inner h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.plans-sub {
+  font-size: 18px;
+  color: #4b4b4b;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.plans-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+.plans-tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #767676;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  border-left: none; border-right: none; border-top: none;
+  transition: all 0.2s;
+}
+.plans-tab.active {
+  color: #2c2c2c;
+  font-weight: 700;
+  border-bottom-color: #2c2c2c;
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.plan-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+  position: relative;
+}
+.plan-card.featured {
+  border: 2px solid #1473E6;
+}
+.plan-best-value {
+  position: absolute;
+  top: -1px; right: 24px;
+  background: #1473E6;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 0 0 6px 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plan-desc {
+  font-size: 16px;
+  color: #6e6e6e;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.plan-billing {
+  font-size: 13px;
+  color: #767676;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.plan-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 6px;
+}
+.plan-price {
+  font-size: 36px;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.plan-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+.plan-ctas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.btn-blue-solid {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: #1473E6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-blue-solid:hover { background: #0d66d0; }
+.btn-outline-blue {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: transparent;
+  color: #1473E6;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid #1473E6;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline-blue:hover { background: rgba(20,115,230,0.06); }
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plan-features li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #4b4b4b;
+  line-height: 1.5;
+}
+.plan-check {
+  color: #2c2c2c;
+  flex-shrink: 0;
+  font-size: 14px;
+  margin-top: 1px;
+}
+.plan-secure {
+  font-size: 12px;
+  color: #767676;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.plans-compare {
+  text-align: center;
+  margin-top: 24px;
+}
+.plans-compare a {
+  font-size: 15px;
+  color: #1473E6;
+  text-decoration: none;
+  font-weight: 700;
+}
+.plans-compare a:hover { text-decoration: underline; }
+
+/* ── PLATFORM / 3-UP SECTION ──────────────────── */
+.platform-section {
+  padding: 96px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.platform-section h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+  max-width: 560px;
+  letter-spacing: -0.02em;
+}
+.platform-section .subtitle {
+  font-size: 18px;
+  color: #4b4b4b;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.65;
+}
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.platform-grid img, .platform-tile {
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+.platform-divider {
+  height: 1px;
+  background: #e1e1e1;
+}
+
+/* ── EXPRESS-EQUIVALENT SECTION ───────────────── */
+.express-section {
+  background: #FEA8EC;
+  padding: 96px 40px;
+}
+.express-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.express-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.express-icon {
+  width: 36px; height: 36px;
+  background: #038387;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.express-section h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  max-width: 640px;
+  letter-spacing: -0.02em;
+}
+.express-section p {
+  font-size: 18px;
+  color: #3d3d3d;
+  margin-bottom: 40px;
+  max-width: 620px;
+  line-height: 1.65;
+}
+.express-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.express-card {
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.express-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.express-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.express-card-label {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+.carousel-nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* ── FAQ SECTION ──────────────────────────────── */
+.faq-section {
+  background: #eeeeee;
+  padding: 96px 40px;
+}
+.faq-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.faq-section h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+.faq-item {
+  background: transparent;
+  border-bottom: 1px solid #d4d4d4;
+}
+.faq-item:first-of-type { border-top: 1px solid #d4d4d4; }
+.faq-q {
+  padding: 22px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c2c2c;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+.faq-q::marker { display: none; }
+.faq-q::-webkit-details-marker { display: none; }
+details[open] .faq-q .faq-icon { transform: rotate(180deg); }
+.faq-icon {
+  font-size: 20px;
+  color: #767676;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-a {
+  padding: 0 0 28px;
+  font-size: 16px;
+  color: #4b4b4b;
+  line-height: 1.75;
+}
+.faq-a a { color: #1473E6; text-decoration: none; }
+.faq-a a:hover { text-decoration: underline; }
+
+/* ── BOTTOM CTA ───────────────────────────────── */
+.bottom-cta {
+  padding: 96px 40px;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.bottom-cta-icon {
+  width: 56px; height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #001E8C, #1473E6);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 800; color: #fff;
+  margin: 0 auto 16px;
+  letter-spacing: -0.5px;
+}
+.bottom-cta h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.bottom-cta p {
+  font-size: 18px;
+  color: #4b4b4b;
+  margin-bottom: 12px;
+}
+.bottom-cta .price-line {
+  font-size: 16px;
+  color: #4b4b4b;
+  margin-bottom: 24px;
+}
+.bottom-cta-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── STICKY BOTTOM BAR ────────────────────────── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 16px;
+  z-index: 300;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.sticky-bar.visible { transform: translateY(0); }
+.sticky-icon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #001E8C, #1473E6);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800; color: #fff;
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+.sticky-name { font-size: 14px; font-weight: 700; color: #fff; white-space: nowrap; }
+.sticky-bar-ctas { display: flex; gap: 8px; margin-left: auto; }
+.sticky-btn-ghost {
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.sticky-btn-ghost:hover { border-color: #fff; color: #fff; }
+.sticky-btn-blue {
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: #1473E6;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.sticky-btn-blue:hover { background: #0d66d0; }
+
+/* ── FOOTER ──────────────────────────────────── */
+footer {
+  border-top: 1px solid #e1e1e1;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #767676;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a {
+  color: #767676;
+  text-decoration: none;
+  font-size: 13px;
+}
+.footer-links a:hover { text-decoration: underline; color: #2c2c2c; }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+  .feature { flex-direction: column !important; padding: 64px 24px; gap: 32px; }
+  .carousel-track { grid-template-columns: 1fr 1fr; }
+  .plans-grid { grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: 1fr 1fr; }
+  .express-grid { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .hero-image { display: none; }
+}
+@media (max-width: 600px) {
+  .gnav-links { display: none; }
+
+  .carousel-track { grid-template-columns: 1fr; }
+  .platform-grid { grid-template-columns: 1fr; }
+  .plans-section, .faq-section, .express-section { padding: 40px 20px; }
+  .hero-inner { padding: 48px 20px; }
+  .carousel-section, .platform-section, .bottom-cta { padding: 48px 20px; }
+}
+
+/* ── BREADCRUMB ──────────────────────────────── */
+.breadcrumb-bar {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 32px;
+  position: sticky;
+  top: 48px;
+  z-index: 198;
+}
+.breadcrumb-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #767676;
+  height: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.breadcrumb-inner a {
+  color: #767676;
+  text-decoration: none;
+}
+.breadcrumb-inner a:hover { text-decoration: underline; color: #2c2c2c; }
+.breadcrumb-sep { color: #b0b0b0; font-size: 11px; }
+.breadcrumb-current { color: #2c2c2c; }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- PRODUCT SUB-NAV -->
+  <nav class="pnav" id="pnav">
+    <div class="pnav-product">
+      <div class="pnav-product-icon">NE</div>
+      <span class="pnav-product-name">Nathan Etter</span>
+    </div>
+    <span class="pnav-sep"></span>
+    <ul class="pnav-tabs" id="pnavTabs">
+      <li><a href="#overview" data-section="overview">Overview</a></li>
+      <li><a href="#experience" data-section="experience">Experience</a></li>
+      <li><a href="#skills" data-section="skills">Skills</a></li>
+      <li><a href="#education" data-section="education">Career</a></li>
+      <li><a href="#connect" data-section="connect">Connect</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── BREADCRUMB ── -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="#overview" id="bcRoot">Nathan Etter</a>
+    <span class="breadcrumb-sep" id="bcSep" style="display:none">›</span>
+    <span class="breadcrumb-current" id="bcSection"></span>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="overview">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-product-label">
+        <div class="hero-product-icon">NE</div>
+        <span>Nathan Etter</span>
+      </div>
+      <h1>Lead smarter. Build faster. Grow with purpose.</h1>
+      <p class="hero-body">
+        A seasoned product and growth executive driving global strategy, product, and engineering at Adobe — with deep expertise in product-led growth, analytics, e-commerce, and generative AI.
+      </p>
+      <p class="hero-price">Senior Vice President, Adobe.com · San Jose, CA</p>
+      <div class="hero-ctas">
+        <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue">Connect on LinkedIn</a>
+        <a href="#education" class="btn-outline-white">Explore career</a>
+      </div>
+      <p class="hero-sub-links">
+        Read his story on the <a href="https://blog.adobe.com/authors/nathan-etter" target="_blank">Adobe Blog</a> or learn about <a href="https://www.marinemammalcenter.org/person/nathan-etter" target="_blank">The Marine Mammal Center board</a>.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNzIwIDYwMCI+CiAgPGRlZnM+CiAgICA8IS0tIE1haW4gZGFyayBiZyAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjcyMCIgeTI9IjYwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDYwYzFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAzMDYwOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwhLS0gQmx1ZSBnbG93IC0tPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93MSIgY3g9IjY1JSIgY3k9IjM1JSIgcj0iNTUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0NzNFNiIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTQ3M0U2IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9Imdsb3cyIiBjeD0iODAlIiBjeT0iNzUlIiByPSI0MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMkM5QUYxIiBzdG9wLW9wYWNpdHk9IjAuMTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMkM5QUYxIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8IS0tIENhcmQgYmcgLS0+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNhcmRCZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDcpIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwhLS0gU2hpbW1lciBvbiBjYXJkIHRvcCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbW1lciIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwyNTUsMjU1LDApIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDgpIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMjU1LDI1NSwwKSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwhLS0gQ2hhcnQgZmlsbCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iY2hhcnRGaWxsIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxNDczRTYiIHN0b3Atb3BhY2l0eT0iMC41Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE0NzNFNiIgc3RvcC1vcGFjaXR5PSIwLjAyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPCEtLSBCbHVyIGZpbHRlciAtLT4KICAgIDxmaWx0ZXIgaWQ9ImJsdXIiIHg9Ii0yMCUiIHk9Ii0yMCUiIHdpZHRoPSIxNDAlIiBoZWlnaHQ9IjE0MCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzMiIvPgogICAgPC9maWx0ZXI+CiAgICA8ZmlsdGVyIGlkPSJzb2Z0Qmx1ciI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiLz4KICAgIDwvZmlsdGVyPgogICAgPCEtLSBEcm9wIHNoYWRvdyBmb3IgY2FyZCAtLT4KICAgIDxmaWx0ZXIgaWQ9ImNhcmRTaGFkb3ciIHg9Ii0xMCUiIHk9Ii0xMCUiIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEzMCUiPgogICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMjAiIHN0ZERldmlhdGlvbj0iMzAiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIwLjYiLz4KICAgIDwvZmlsdGVyPgogICAgPCEtLSBDbGlwIGZvciBjYXJkIC0tPgogICAgPGNsaXBQYXRoIGlkPSJjYXJkQ2xpcCI+CiAgICAgIDxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSI1MjAiIHJ4PSIyMCIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxjbGlwUGF0aCBpZD0iaW5uZXJDbGlwIj4KICAgICAgPHJlY3QgeD0iNTYiIHk9IjE2MCIgd2lkdGg9IjI5MCIgaGVpZ2h0PSIxMjAiIHJ4PSI0Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KCiAgPCEtLSBCRyAtLT4KICA8cmVjdCB3aWR0aD0iNzIwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB3aWR0aD0iNzIwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnbG93MSkiLz4KICA8cmVjdCB3aWR0aD0iNzIwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNnbG93MikiLz4KCiAgPCEtLSBCbHVycmVkIGFtYmllbnQgYmxvYnMgLS0+CiAgPGVsbGlwc2UgY3g9IjUwMCIgY3k9IjE4MCIgcng9IjE4MCIgcnk9IjEyMCIgZmlsbD0iIzE0NzNFNiIgb3BhY2l0eT0iMC4xMiIgZmlsdGVyPSJ1cmwoI2JsdXIpIi8+CiAgPGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQ4MCIgcng9IjEyMCIgcnk9IjkwIiBmaWxsPSIjMkM5QUYxIiBvcGFjaXR5PSIwLjA4IiBmaWx0ZXI9InVybCgjYmx1cikiLz4KCiAgPCEtLSBTdWJ0bGUgZ3JpZCAtLT4KICA8ZyBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMzUpIiBzdHJva2Utd2lkdGg9IjEiPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxMDAiIHgyPSI3MjAiIHkyPSIxMDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMjAwIiB4Mj0iNzIwIiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjcyMCIgeTI9IjMwMCIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI0MDAiIHgyPSI3MjAiIHkyPSI0MDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTAwIiB4Mj0iNzIwIiB5Mj0iNTAwIi8+CiAgICA8bGluZSB4MT0iMTIwIiB5MT0iMCIgeDI9IjEyMCIgeTI9IjYwMCIvPgogICAgPGxpbmUgeDE9IjI0MCIgeTE9IjAiIHgyPSIyNDAiIHkyPSI2MDAiLz4KICAgIDxsaW5lIHgxPSIzNjAiIHkxPSIwIiB4Mj0iMzYwIiB5Mj0iNjAwIi8+CiAgICA8bGluZSB4MT0iNDgwIiB5MT0iMCIgeDI9IjQ4MCIgeTI9IjYwMCIvPgogICAgPGxpbmUgeDE9IjYwMCIgeTE9IjAiIHgyPSI2MDAiIHkyPSI2MDAiLz4KICA8L2c+CgogIDwhLS0g4pWQ4pWQ4pWQIE1BSU4gQ0FSRCDilZDilZDilZAgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2NhcmRTaGFkb3cpIj4KICAgIDxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSI1MjAiIHJ4PSIyMCIgZmlsbD0iIzBkMTUyNSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwvZz4KICA8IS0tIFNoaW1tZXIgdG9wIGVkZ2UgLS0+CiAgPHJlY3QgeD0iNDAiIHk9IjQwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjEiIHJ4PSIxIiBmaWxsPSJ1cmwoI3NoaW1tZXIpIi8+CiAgPCEtLSBDYXJkIHRvcCBhY2NlbnQgbGluZSAtLT4KICA8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMyIgcng9IjMiIGZpbGw9InVybCgjY2FyZEFjY2VudCkiLz4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iY2FyZEFjY2VudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTQ3M0U2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMkM5QUYxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE0NzNFNiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KCiAgPCEtLSDilIDilIAgQ0FSRCBIRUFERVIg4pSA4pSAIC0tPgogIDwhLS0gQXZhdGFyIGNpcmNsZSAtLT4KICA8Y2lyY2xlIGN4PSI4OCIgY3k9IjEwMCIgcj0iMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMykiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGNpcmNsZSBjeD0iODgiIGN5PSIxMDAiIHI9IjI2IiBmaWxsPSIjMTQ3M0U2IiBvcGFjaXR5PSIwLjE1Ii8+CiAgPHRleHQgeD0iODgiIHk9IjEwNyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSItMC41Ij5ORTwvdGV4dD4KICA8IS0tIE9ubGluZSBpbmRpY2F0b3IgLS0+CiAgPGNpcmNsZSBjeD0iMTEwIiBjeT0iMTIyIiByPSI2IiBmaWxsPSIjMjJjNTVlIi8+CiAgPGNpcmNsZSBjeD0iMTEwIiBjeT0iMTIyIiByPSI2IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjQiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgdmFsdWVzPSI2OzEwOzYiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjAuNDswOzAuNCIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICA8L2NpcmNsZT4KCiAgPCEtLSBOYW1lICYgdGl0bGUgLS0+CiAgPHRleHQgeD0iMTMwIiB5PSI5MCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0id2hpdGUiIGxldHRlci1zcGFjaW5nPSItMC4zIj5OYXRoYW4gRXR0ZXI8L3RleHQ+CiAgPHRleHQgeD0iMTMwIiB5PSIxMTIiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC41KSI+U2VuaW9yIFZpY2UgUHJlc2lkZW50IMK3IEFkb2JlLmNvbTwvdGV4dD4KICA8IS0tIExvY2F0aW9uIC0tPgogIDx0ZXh0IHg9IjEzMCIgeT0iMTMwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMykiPvCfk40gU2FuIEpvc2UsIENBICDCtyAgU3RhbmZvcmQgVW5pdmVyc2l0eSAgwrcgIDUwMCsgY29ubmVjdGlvbnM8L3RleHQ+CgogIDwhLS0gQWRvYmUgbG9nbyBiYWRnZSAtLT4KICA8cmVjdCB4PSI1NzQiIHk9IjY2IiB3aWR0aD0iODYiIGhlaWdodD0iMjgiIHJ4PSIxNCIgZmlsbD0icmdiYSgyNTAsMTUsMCwwLjE1KSIgc3Ryb2tlPSJyZ2JhKDI1MCwxNSwwLDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjU5MCIgeT0iODQiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNGQTBGMDAiPuKXjyBBZG9iZSBTVlA8L3RleHQ+CgogIDwhLS0gRGl2aWRlciAtLT4KICA8bGluZSB4MT0iNTYiIHkxPSIxNDgiIHgyPSI2NjQiIHkyPSIxNDgiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA3KSIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDwhLS0g4pSA4pSAIFNUQVRTIFJPVyDilIDilIAgLS0+CiAgPCEtLSBTdGF0IDEgLS0+CiAgPHJlY3QgeD0iNTYiIHk9IjE2NCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI3MCIgcng9IjEwIiBmaWxsPSJyZ2JhKDIwLDExNSwyMzAsMC4wOCkiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMikiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjEyNiIgeT0iMTk2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MjArPC90ZXh0PgogIDx0ZXh0IHg9IjEyNiIgeT0iMjE2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIwLjUiPllFQVJTIElOIFRFQ0g8L3RleHQ+CgogIDwhLS0gU3RhdCAyIC0tPgogIDxyZWN0IHg9IjIxMCIgeT0iMTY0IiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjcwIiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMTE1LDIzMCwwLjA4KSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4yKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMjgwIiB5PSIxOTYiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMyQzlBRjEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjcrPC90ZXh0PgogIDx0ZXh0IHg9IjI4MCIgeT0iMjE2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIwLjUiPkNPTVBBTklFUyBMRUQ8L3RleHQ+CgogIDwhLS0gU3RhdCAzIC0tPgogIDxyZWN0IHg9IjM2NCIgeT0iMTY0IiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjcwIiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMTE1LDIzMCwwLjA4KSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4yKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iNDM0IiB5PSIxOTYiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TVlA8L3RleHQ+CiAgPHRleHQgeD0iNDM0IiB5PSIyMTYiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC40KSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjAuNSI+Q1VSUkVOVCBUSVRMRTwvdGV4dD4KCiAgPCEtLSBTdGF0IDQgLS0+CiAgPHJlY3QgeD0iNTE4IiB5PSIxNjQiIHdpZHRoPSIxNDYiIGhlaWdodD0iNzAiIHJ4PSIxMCIgZmlsbD0icmdiYSgyMCwxMTUsMjMwLDAuMDgpIiBzdHJva2U9InJnYmEoMjAsMTE1LDIzMCwwLjIpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI1OTEiIHk9IjE5NCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlN0YW5mb3JkPC90ZXh0PgogIDx0ZXh0IHg9IjU5MSIgeT0iMjExIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMzUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5XaGFydG9uIMK3IEdTQjwvdGV4dD4KICA8dGV4dCB4PSI1OTEiIHk9IjIyNyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMjUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5FRFVDQVRJT048L3RleHQ+CgogIDwhLS0g4pSA4pSAIENBUkVFUiBDSEFSVCDilIDilIAgLS0+CiAgPCEtLSBDaGFydCBsYWJlbCAtLT4KICA8dGV4dCB4PSI1NiIgeT0iMjY2IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIGxldHRlci1zcGFjaW5nPSIxLjUiPkNBUkVFUiBJTVBBQ1QgVFJBSkVDVE9SWTwvdGV4dD4KCiAgPCEtLSBDaGFydCBhcmVhICgyODAgeCAxMTAsIGZyb20geT0yNzgpIC0tPgogIDwhLS0gQXJlYSBmaWxsIC0tPgogIDxwYXRoIGQ9Ik01NiwzODggQzEwMCwzNzUgMTUwLDM1NSAyMDAsMzMwIEMyNTAsMzA1IDI5NSwyNzAgMzQwLDI0NSBDMzg1LDIxOCA0MzAsMTk1IDQ4MCwxNzIgQzUyMCwxNTQgNTY1LDEzOCA2NjQsMTE4IEw2NjQsMzg4IFoiCiAgICAgICAgZmlsbD0idXJsKCNjaGFydEZpbGwpIi8+CiAgPCEtLSBDaGFydCBsaW5lIC0tPgogIDxwYXRoIGQ9Ik01NiwzODggQzEwMCwzNzUgMTUwLDM1NSAyMDAsMzMwIEMyNTAsMzA1IDI5NSwyNzAgMzQwLDI0NSBDMzg1LDIxOCA0MzAsMTk1IDQ4MCwxNzIgQzUyMCwxNTQgNTY1LDEzOCA2NjQsMTE4IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE0NzNFNiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gRGF0YSBwb2ludHMgLS0+CiAgPGNpcmNsZSBjeD0iNTYiIGN5PSIzODgiIHI9IjMuNSIgZmlsbD0iIzE0NzNFNiIvPgogIDxjaXJjbGUgY3g9IjE1NSIgY3k9IjM1MiIgcj0iMy41IiBmaWxsPSIjMTQ3M0U2Ii8+CiAgPGNpcmNsZSBjeD0iMjUwIiBjeT0iMzA3IiByPSIzLjUiIGZpbGw9IiMxNDczRTYiLz4KICA8Y2lyY2xlIGN4PSIzNDUiIGN5PSIyNDMiIHI9IjQiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMxNDczRTYiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjQ0MCIgY3k9IjE5MiIgcj0iNCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzE0NzNFNiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNTQ1IiBjeT0iMTQyIiByPSI0IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMkM5QUYxIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI2NjQiIGN5PSIxMTgiIHI9IjUiIGZpbGw9IiMyQzlBRjEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgoKICA8IS0tIFBvaW50IGxhYmVscyAtLT4KICA8dGV4dCB4PSI1NiIgeT0iNDA1IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QWNjZW50dXJlPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMzY5IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+ZUJheTwvdGV4dD4KICA8dGV4dCB4PSIyNTAiIHk9IjMyNCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMykiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlp5bmdhPC90ZXh0PgogIDx0ZXh0IHg9IjM0NSIgeT0iMjYxIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGlzbmV5PC90ZXh0PgogIDx0ZXh0IHg9IjQ0MCIgeT0iMTc4IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QWRvYmUgVlA8L3RleHQ+CgogIDwhLS0gQ2FsbG91dCBmb3IgY3VycmVudCByb2xlIC0tPgogIDxsaW5lIHgxPSI2NjQiIHkxPSIxMTgiIHgyPSI2MjAiIHkyPSI5MCIgc3Ryb2tlPSJyZ2JhKDQ0LDE1NCwyNDEsMC41KSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIzLDMiLz4KICA8cmVjdCB4PSI0ODgiIHk9IjY2IiB3aWR0aD0iMTI0IiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0icmdiYSgyMCwxMTUsMjMwLDAuMikiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuNCkiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjU1MCIgeT0iODQiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiMyQzlBRjEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI2MDAiPkFkb2JlIFNWUCDCtyBOb3c8L3RleHQ+CgogIDwhLS0gSG9yaXpvbnRhbCBiYXNlbGluZSAtLT4KICA8bGluZSB4MT0iNTYiIHkxPSIzOTIiIHgyPSI2NjQiIHkyPSIzOTIiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA2KSIgc3Ryb2tlLXdpZHRoPSIxIi8+CgogIDwhLS0g4pSA4pSAIFNLSUxMUyBST1cg4pSA4pSAIC0tPgogIDxsaW5lIHgxPSI1NiIgeTE9IjQxNSIgeDI9IjY2NCIgeTI9IjQxNSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDcpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI1NiIgeT0iNDM0IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIGxldHRlci1zcGFjaW5nPSIxLjUiPkNPUkUgRVhQRVJUSVNFPC90ZXh0PgoKICA8IS0tIFNraWxsIHBpbGxzIC0tPgogIDxyZWN0IHg9IjU2IiB5PSI0NDQiIHdpZHRoPSIxNDAiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0icmdiYSgyMCwxMTUsMjMwLDAuMTUpIiBzdHJva2U9InJnYmEoMjAsMTE1LDIzMCwwLjM1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMTI2IiB5PSI0NjAiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMyQzlBRjEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI1MDAiPlByb2R1Y3QtTGVkIEdyb3d0aDwvdGV4dD4KCiAgPHJlY3QgeD0iMjA4IiB5PSI0NDQiIHdpZHRoPSIxMTgiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0icmdiYSgyMCwxMTUsMjMwLDAuMSkiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMikiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjI2NyIgeT0iNDYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNikiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFuYWx5dGljcyAmYW1wOyBEYXRhPC90ZXh0PgoKICA8cmVjdCB4PSIzMzgiIHk9IjQ0NCIgd2lkdGg9IjEwNiIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSJyZ2JhKDIwLDExNSwyMzAsMC4xKSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4yKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMzkxIiB5PSI0NjAiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC42KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RS1Db21tZXJjZTwvdGV4dD4KCiAgPHJlY3QgeD0iNDU2IiB5PSI0NDQiIHdpZHRoPSI5MCIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSJyZ2JhKDIwLDExNSwyMzAsMC4xKSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4yKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iNTAxIiB5PSI0NjAiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC42KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R2VuZXJhdGl2ZSBBSTwvdGV4dD4KCiAgPHJlY3QgeD0iNTU4IiB5PSI0NDQiIHdpZHRoPSIxMDYiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0icmdiYSgyMCwxMTUsMjMwLDAuMSkiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMikiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjYxMSIgeT0iNDYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNikiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkVuZ2luZWVyaW5nIE9yZzwvdGV4dD4KCiAgPCEtLSBTZWNvbmQgcm93IG9mIHBpbGxzIC0tPgogIDxyZWN0IHg9IjU2IiB5PSI0NzgiIHdpZHRoPSI4NiIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSJyZ2JhKDIwLDExNSwyMzAsMC4wOCkiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMTUpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI5OSIgeT0iNDk0IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNDUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5VWCBTdHJhdGVneTwvdGV4dD4KCiAgPHJlY3QgeD0iMTU0IiB5PSI0NzgiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSJyZ2JhKDIwLDExNSwyMzAsMC4wOCkiIHN0cm9rZT0icmdiYSgyMCwxMTUsMjMwLDAuMTUpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIxOTQiIHk9IjQ5NCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjQ1KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TW9uZXRpemF0aW9uPC90ZXh0PgoKICA8cmVjdCB4PSIyNDYiIHk9IjQ3OCIgd2lkdGg9Ijg0IiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9InJnYmEoMjAsMTE1LDIzMCwwLjA4KSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4xNSkiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjI4OCIgeT0iNDk0IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNDUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BZG9iZSBGaXJlZmx5PC90ZXh0PgoKICA8cmVjdCB4PSIzNDIiIHk9IjQ3OCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9InJnYmEoMjAsMTE1LDIzMCwwLjA4KSIgc3Ryb2tlPSJyZ2JhKDIwLDExNSwyMzAsMC4xNSkiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjM4MiIgeT0iNDk0IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNDUpIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MZWFkZXJzaGlwPC90ZXh0PgoKICA8IS0tIFNwaXJpdCBhbmltYWwgdGFnIC0tPgogIDxyZWN0IHg9IjQ0MCIgeT0iNDc4IiB3aWR0aD0iOTYiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0icmdiYSg4LDE0NSwxNzgsMC4xKSIgc3Ryb2tlPSJyZ2JhKDgsMTQ1LDE3OCwwLjI1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iNDg4IiB5PSI0OTQiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9InJnYmEoOCwxNDUsMTc4LDAuOCkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfkJkgTWFyaW5lIEJpbzwvdGV4dD4KCiAgPCEtLSBGb290ZXIgYmFyIC0tPgogIDxsaW5lIHgxPSI1NiIgeTE9IjUyMCIgeDI9IjY2NCIgeTI9IjUyMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDcpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI1NiIgeT0iNTQwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMikiPmxpbmtlZGluLmNvbS9pbi9uYXRoYW5ldHRlcjwvdGV4dD4KICA8dGV4dCB4PSI2NjQiIHk9IjU0MCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjIpIiB0ZXh0LWFuY2hvcj0iZW5kIj5hZG9iZS5jb20gwrcgU2FuIEpvc2UsIENBPC90ZXh0Pgo8L3N2Zz4=" alt="Nathan Etter — SVP Adobe.com executive profile">
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FEATURE 1: Product Leadership ── -->
+<section class="feature" id="experience">
+  <div class="feature-text">
+    <p class="feature-label"><strong>Product Leadership</strong></p>
+    <h2>Building for growth, at every scale.</h2>
+    <p class="feature-body">
+      From writing code at Accenture to leading global strategy as SVP at Adobe, Nathan's two-decade arc is a masterclass in product-led growth. He transforms complex digital ecosystems into engines of measurable impact — uniting product, engineering, and analytics into one coherent motion.
+    </p>
+  </div>
+  <div class="feature-media">
+    <div class="feature-visual-tile" style="background:linear-gradient(135deg,#081018 0%,#0a1828 100%);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:4/3;gap:8px"><svg width="100%" height="100%" viewBox="0 0 500 375" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cf1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1473E6" stop-opacity="0.5"/><stop offset="100%" stop-color="#1473E6" stop-opacity="0"/></linearGradient></defs><path d="M40,310 C90,295 140,270 190,248 C240,225 285,195 330,170 C375,144 420,120 460,98" fill="none" stroke="#1473E6" stroke-width="2.5" stroke-linecap="round"/><path d="M40,310 C90,295 140,270 190,248 C240,225 285,195 330,170 C375,144 420,120 460,98 L460,340 L40,340 Z" fill="url(#cf1)"/><circle cx="40" cy="310" r="4" fill="#1473E6"/><circle cx="190" cy="248" r="4" fill="#1473E6"/><circle cx="330" cy="170" r="5" fill="white" stroke="#1473E6" stroke-width="2"/><circle cx="460" cy="98" r="5" fill="#2C9AF1" stroke="white" stroke-width="2"/><text x="40" y="330" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Accenture</text><text x="175" y="265" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">eBay · Zynga</text><text x="300" y="188" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Disney</text><text x="420" y="88" font-family="-apple-system,sans-serif" font-size="10" fill="#2C9AF1" font-weight="600">Adobe SVP</text><text x="250" y="30" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="2">CAREER TRAJECTORY</text><line x1="40" y1="340" x2="460" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1"/></svg></div>
+  </div>
+</section>
+
+<!-- ── FEATURE 2: Adobe.com Strategy ── -->
+<section class="feature reverse">
+  <div class="feature-text">
+    <p class="feature-label"><strong>Adobe.com Strategy</strong></p>
+    <h2>The center of Adobe's digital universe.</h2>
+    <p class="feature-body">
+      As SVP, Nathan oversees Adobe.com — the primary digital touchpoint for millions of creatives, businesses, and learners worldwide. He connects Creative Cloud, Analytics, Commerce, and Generative AI into a seamless, conversion-optimized experience that powers Adobe's global growth.
+    </p>
+  </div>
+  <div class="feature-media">
+    <div class="feature-visual-tile" style="background:linear-gradient(135deg,#080f1e 0%,#0c1828 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3"><svg width="100%" height="100%" viewBox="0 0 500 375" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="188" r="52" fill="rgba(20,115,230,0.12)" stroke="rgba(20,115,230,0.35)" stroke-width="1.5"/><circle cx="250" cy="188" r="36" fill="rgba(20,115,230,0.06)" stroke="rgba(20,115,230,0.2)" stroke-width="1"/><text x="250" y="184" font-family="-apple-system,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="600">adobe.com</text><text x="250" y="200" font-family="-apple-system,sans-serif" font-size="8" fill="rgba(255,255,255,0.45)" text-anchor="middle">Nathan Etter SVP</text><line x1="250" y1="136" x2="250" y2="80" stroke="rgba(20,115,230,0.3)" stroke-width="1" stroke-dasharray="4,4"/><circle cx="250" cy="62" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><text x="250" y="66" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Creative Cloud</text><line x1="295" y1="165" x2="370" y2="125" stroke="rgba(20,115,230,0.3)" stroke-width="1" stroke-dasharray="4,4"/><circle cx="398" cy="112" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><text x="398" y="116" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Product Growth</text><line x1="295" y1="212" x2="370" y2="252" stroke="rgba(20,115,230,0.3)" stroke-width="1" stroke-dasharray="4,4"/><circle cx="398" cy="264" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><text x="398" y="268" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Analytics</text><line x1="205" y1="212" x2="130" y2="252" stroke="rgba(20,115,230,0.3)" stroke-width="1" stroke-dasharray="4,4"/><circle cx="102" cy="264" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><text x="102" y="268" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Engineering</text><line x1="205" y1="165" x2="130" y2="125" stroke="rgba(20,115,230,0.3)" stroke-width="1" stroke-dasharray="4,4"/><circle cx="102" cy="112" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><text x="102" y="116" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">UX &amp; Design</text><text x="250" y="345" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.2)" text-anchor="middle" letter-spacing="2">ADOBE.COM STRATEGY</text></svg></div>
+  </div>
+</section>
+
+<!-- ── FEATURE 3: GenAI Champion ── -->
+<section class="feature">
+  <div class="feature-text">
+    <p class="feature-label"><strong>Generative AI Champion</strong></p>
+    <h2>Reimagining creativity with AI.</h2>
+    <p class="feature-body">
+      Nathan is a leading voice in Adobe's generative AI strategy — championing Adobe Firefly, the content supply chain across Experience Cloud and Creative Cloud, and a new wave of AI-powered digital marketing tools that help brands create, personalize, and publish at scale.
+    </p>
+  </div>
+  <div class="feature-media">
+    <div class="feature-visual-tile" style="background:linear-gradient(135deg,#06080f 0%,#0a1428 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3"><svg width="100%" height="100%" viewBox="0 0 500 375" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="30" width="420" height="55" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/><text x="60" y="52" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)">Prompt</text><text x="60" y="72" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)">"Generate a creative campaign for Adobe.com"</text><rect x="40" y="100" width="420" height="80" rx="10" fill="rgba(20,115,230,0.1)" stroke="rgba(20,115,230,0.25)" stroke-width="1"/><text x="60" y="122" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(44,154,241,0.7)">Adobe Firefly · Generative AI</text><text x="60" y="142" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Transforming Adobe.com with AI-powered</text><text x="60" y="160" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">content creation and personalization...</text><rect x="40" y="200" width="190" height="120" rx="8" fill="rgba(20,115,230,0.06)" stroke="rgba(20,115,230,0.15)" stroke-width="1"/><text x="135" y="268" font-family="-apple-system,sans-serif" font-size="32" fill="rgba(20,115,230,0.25)" text-anchor="middle">AI</text><rect x="245" y="200" width="215" height="120" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.15)" stroke-width="1"/><text x="353" y="268" font-family="-apple-system,sans-serif" font-size="32" fill="rgba(139,92,246,0.25)" text-anchor="middle">FF</text><rect x="40" y="335" width="260" height="3" rx="1" fill="rgba(255,255,255,0.05)"/><rect x="40" y="335" width="190" height="3" rx="1" fill="rgba(20,115,230,0.5)"/><text x="315" y="339" font-family="-apple-system,sans-serif" font-size="9" fill="rgba(20,115,230,0.6)">76%</text></svg></div>
+  </div>
+</section>
+
+<!-- ── CAROUSEL: EXPLORE EXPERTISE ── -->
+<section class="carousel-section" id="skills">
+  <h2>Explore Nathan's expertise.</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#1473E6 0%,#0550C2 100%)">
+    <span style="font-size:52px;line-height:1">📈</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Product-Led Growth</span>
+  </div>
+        <h3>Product-Led Growth</h3>
+        <p>Mastery of frameworks that put the product at the center of acquisition, expansion, and retention — driving Adobe.com as a world-class growth engine.</p>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#2C9AF1 0%,#0891B2 100%)">
+    <span style="font-size:52px;line-height:1">📊</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Analytics &amp; Data</span>
+  </div>
+        <h3>Analytics &amp; Data Science</h3>
+        <p>Deep expertise in turning complex behavioral and transactional data into actionable product and business strategy at enterprise scale.</p>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#8B5CF6 0%,#6D28D9 100%)">
+    <span style="font-size:52px;line-height:1">✦</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Generative AI</span>
+  </div>
+        <h3>Generative AI at Adobe</h3>
+        <p>A vocal champion of Adobe Firefly, Generative Fill, and AI-driven content experiences — positioned at the forefront of the creative AI revolution.</p>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#059669 0%,#0D9488 100%)">
+    <span style="font-size:52px;line-height:1">🏢</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Disney · Zynga · eBay</span>
+  </div>
+        <h3>Disney · Zynga · eBay</h3>
+        <p>Led digital product and commerce teams at iconic consumer brands across media, gaming, and marketplace categories — building a unique cross-industry lens.</p>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#0891B2 0%,#0369A1 100%)">
+    <span style="font-size:52px;line-height:1">🌊</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Marine Mammal Center</span>
+  </div>
+        <h3>Marine Mammal Center</h3>
+        <p>Board Director since 2021. Nathan's marine biology research at Stanford's Hopkins Marine Station sparked a lifelong passion for conservation.</p>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-card-img" style="background:linear-gradient(135deg,#D97706 0%,#B45309 100%)">
+    <span style="font-size:52px;line-height:1">🎓</span>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);margin-top:12px;letter-spacing:0.03em;text-transform:uppercase">Stanford · Wharton</span>
+  </div>
+        <h3>Stanford · Wharton · Stanford GSB</h3>
+        <p>B.S. Biological Sciences from Stanford, with executive education at The Wharton School and Stanford Graduate School of Business.</p>
+      </div>
+    </div>
+  </div>
+  <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="view-all-link">View all experience →</a>
+</section>
+
+<!-- ── PLANS / CAREER TIMELINE SECTION ── -->
+<section class="plans-outer" id="education">
+  <div class="plans-inner">
+    <p class="plans-label">Career</p>
+    <h2>Nathan's professional journey.</h2>
+    <p class="plans-sub">From early-career engineering to leading Adobe's global digital strategy — a career spanning the most iconic companies in tech and media.</p>
+    <div class="plans-tabs">
+      <button class="plans-tab active" onclick="switchTab(this,'tab-ind')">Adobe</button>
+      <button class="plans-tab" onclick="switchTab(this,'tab-stu')">Pre-Adobe</button>
+      <button class="plans-tab" onclick="switchTab(this,'tab-tea')">Education</button>
+    </div>
+
+    <div id="tab-ind" class="plans-grid" style="display:grid">
+      <div class="plan-card featured">
+        <div class="plan-best-value">Current Role</div>
+        <p class="plan-desc">Global strategy, growth, product, and engineering for Adobe's online properties.</p>
+        <p class="plan-billing">Adobe, Inc. · San Jose, CA · 2017 – Present</p>
+        <p class="plan-name">Senior Vice President</p>
+        <p class="plan-price">Adobe.com <span>+ Adobe.com Strategy</span></p>
+        <div class="plan-ctas">
+          <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue-solid">View on LinkedIn</a>
+          <a href="https://blog.adobe.com/authors/nathan-etter" target="_blank" class="btn-outline-blue">Adobe Blog</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Global strategy and growth for Adobe.com</li>
+          <li><span class="plan-check">✓</span> Leads product, engineering, and analytics teams</li>
+          <li><span class="plan-check">✓</span> Champions Adobe Firefly and Generative AI</li>
+          <li><span class="plan-check">✓</span> Unveiled Adobe GenStudio at Adobe Summit 2024</li>
+          <li><span class="plan-check">✓</span> Board Director, The Marine Mammal Center (2021–)</li>
+        </ul>
+        <p class="plan-secure">🔒 500+ LinkedIn connections</p>
+      </div>
+      <div class="plan-card">
+        <p class="plan-desc">Formerly: VP of Adobe.com Experience, then VP Adobe.com &amp; Marketing Technology.</p>
+        <p class="plan-billing">Adobe, Inc. · San Jose, CA · 2017 – 2022 (prior roles)</p>
+        <p class="plan-name">Vice President</p>
+        <p class="plan-price">Adobe.com Experience <span>+ Martech</span></p>
+        <div class="plan-ctas">
+          <a href="https://blog.adobe.com/en/publish/2017/08/14/meet-adobes-new-vice-president-of-adobe-com-experience-nathan-etter" target="_blank" class="btn-blue-solid">Read Intro Story</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Joined Adobe as VP of Adobe.com Experience (2017)</li>
+          <li><span class="plan-check">✓</span> Led adobe.com redesign and platform modernization</li>
+          <li><span class="plan-check">✓</span> Scaled commerce and subscription conversion</li>
+          <li><span class="plan-check">✓</span> Built world-class analytics and data science teams</li>
+        </ul>
+        <p class="plan-secure">🔒 Secure career progression</p>
+      </div>
+    </div>
+
+    <div id="tab-stu" class="plans-grid" style="display:none">
+      <div class="plan-card">
+        <p class="plan-billing">The Walt Disney Company · 2014 – 2017</p>
+        <p class="plan-name">VP, Digital Commerce &amp; Product</p>
+        <p class="plan-price">Disney <span>/ Theme Parks &amp; Resorts Digital</span></p>
+        <div class="plan-ctas">
+          <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue-solid">View on LinkedIn</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Led digital product for parks and experiences</li>
+          <li><span class="plan-check">✓</span> E-commerce and guest experience transformation</li>
+          <li><span class="plan-check">✓</span> Consumer-to-enterprise product breadth</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <p class="plan-billing">Zynga · 2011–2014 &nbsp;|&nbsp; eBay · 2007–2011</p>
+        <p class="plan-name">VP Product / Sr. Director Product</p>
+        <p class="plan-price">Zynga &amp; eBay <span>/ Gaming &amp; Commerce</span></p>
+        <div class="plan-ctas">
+          <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue-solid">View on LinkedIn</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> VP Product Management at Zynga (social gaming)</li>
+          <li><span class="plan-check">✓</span> Sr. Director Product at eBay (marketplace commerce)</li>
+          <li><span class="plan-check">✓</span> Monetization and consumer growth expertise</li>
+          <li><span class="plan-check">✓</span> Mercury, Kintana, Accenture in early career</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tab-tea" class="plans-grid" style="display:none">
+      <div class="plan-card featured">
+        <div class="plan-best-value">Primary Degree</div>
+        <p class="plan-billing">Stanford University · Undergraduate</p>
+        <p class="plan-name">B.S. Biological Sciences</p>
+        <p class="plan-price">Stanford <span>/ Neuroscience &amp; Animal Behavior + CS</span></p>
+        <div class="plan-ctas">
+          <a href="https://stanford.edu" target="_blank" class="btn-blue-solid">Stanford University</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Concentration: Neuroscience &amp; Animal Behavior</li>
+          <li><span class="plan-check">✓</span> Extensive Computer Science coursework</li>
+          <li><span class="plan-check">✓</span> Residency at Hopkins Marine Station, Monterey Bay</li>
+          <li><span class="plan-check">✓</span> Thesis on Octopus rubescens — his spirit animal 🐙</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <p class="plan-billing">Executive Education</p>
+        <p class="plan-name">The Wharton School + Stanford GSB</p>
+        <p class="plan-price">Exec Ed <span>/ Business &amp; Leadership</span></p>
+        <div class="plan-ctas">
+          <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue-solid">View Profile</a>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> The Wharton School executive program (2005)</li>
+          <li><span class="plan-check">✓</span> Stanford GSB executive education</li>
+          <li><span class="plan-check">✓</span> Lifelong Silicon Valley ecosystem connection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plans-compare"><a href="https://www.linkedin.com/in/nathanetter/" target="_blank">View full career history on LinkedIn ›</a></div>
+  </div>
+</section>
+
+<!-- ── PLATFORM 3-UP ── -->
+<section class="platform-section">
+  <h2>Nathan leads across every dimension.</h2>
+  <p class="subtitle">
+    Whether on stage at Adobe Summit, diving at Monterey Bay, or building the strategy that powers Adobe.com globally — Nathan brings the same intensity and curiosity to every room.
+  </p>
+  <div class="platform-grid">
+    <div class="platform-tile" style="background:linear-gradient(135deg,#FA0F00 0%,#C40606 100%)">
+      <span style="font-size:72px;line-height:1">🏢</span>
+      <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,0.9);margin-top:16px">At Adobe HQ</span>
+      <span style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:4px">San Jose, CA</span>
+    </div>
+    <div class="platform-tile" style="background:linear-gradient(135deg,#1473E6 0%,#0550C2 100%)">
+      <span style="font-size:72px;line-height:1">🎤</span>
+      <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,0.9);margin-top:16px">On the Road</span>
+      <span style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:4px">Conference Speaker</span>
+    </div>
+    <div class="platform-tile" style="background:linear-gradient(135deg,#0891B2 0%,#0369A1 100%)">
+      <span style="font-size:72px;line-height:1">🌊</span>
+      <span style="font-size:15px;font-weight:700;color:rgba(255,255,255,0.9);margin-top:16px">Marine Mammal Center</span>
+      <span style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:4px">Board Director · 2021–Present</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPRESS-EQUIVALENT: MARINE MAMMAL CENTER ── -->
+<section class="express-section">
+  <div class="express-inner">
+    <div class="express-header">
+      <div class="express-icon">🌊</div>
+    </div>
+    <h2>Beyond tech: Nathan's commitment to the ocean.</h2>
+    <p>
+      Nathan joined the board of The Marine Mammal Center in 2021, channeling his deep love for marine life — sparked by months of nocturnal scuba dives studying octopuses in Monterey Bay — into meaningful conservation work. His spirit animal? The octopus.
+    </p>
+    <div class="express-grid">
+      <a href="https://www.marinemammalcenter.org/person/nathan-etter" target="_blank" class="express-card">
+        <div style="background:linear-gradient(135deg,#1a1a2e,#0d1a3a);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/2;gap:8px;width:100%"><span style="font-size:40px">🤝</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.8)">Connect</span></div>
+        <div class="express-card-label">Connect with Nathan</div>
+      </a>
+      <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="express-card">
+        <div style="background:linear-gradient(135deg,#1a1a2e,#0d1a3a);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/2;gap:8px;width:100%"><span style="font-size:40px">💼</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.8)">Explore Career</span></div>
+        <div class="express-card-label">Explore Full Career</div>
+      </a>
+      <a href="https://blog.adobe.com/en/publish/2017/08/14/meet-adobes-new-vice-president-of-adobe-com-experience-nathan-etter" target="_blank" class="express-card">
+        <div style="background:linear-gradient(135deg,#1a1a2e,#0d1a3a);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/2;gap:8px;width:100%"><span style="font-size:40px">&#128221;</span><span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.8)">Read Insights</span></div>
+        <div class="express-card-label">Read Nathan's Story</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" id="connect">
+  <div class="faq-inner">
+    <h2>Questions? We have answers.</h2>
+
+    <details class="faq-item">
+      <summary class="faq-q">What is Nathan's current role at Adobe? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Nathan Etter is the Senior Vice President at Adobe, overseeing global strategy, growth, product, and engineering for <a href="https://www.adobe.com" target="_blank">Adobe.com</a>. He is responsible for the primary digital channel through which millions of creatives and businesses discover, evaluate, and purchase Adobe products globally.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What companies did Nathan work at before Adobe? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Nathan has held leadership roles at The Walt Disney Company (VP, Digital Commerce), Zynga (VP Product Management), eBay (Senior Director, Product Management), and earlier-career positions at Mercury, Kintana, and Accenture. His career spans consumer, enterprise, gaming, and media industries.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Where did Nathan study? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Nathan holds a B.S. in Biological Sciences from Stanford University, where he concentrated in Neuroscience and Animal Behavior alongside extensive Computer Science coursework. He also completed executive education at The Wharton School and Stanford Graduate School of Business.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What's Nathan's connection to the Marine Mammal Center? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Nathan joined the board of <a href="https://www.marinemammalcenter.org/person/nathan-etter" target="_blank">The Marine Mammal Center</a> in 2021. His passion for marine life stems from his undergraduate research at Stanford's Hopkins Marine Station in Monterey Bay, where he spent months studying <em>Octopus rubescens</em> — which he affectionately calls his spirit animal.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What is Nathan's role in Adobe's generative AI strategy? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Nathan is a key champion of Adobe's generative AI initiatives, including <a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a>, the content supply chain across Experience Cloud and Creative Cloud, and Adobe GenStudio. At Adobe Summit 2024, he was part of the team that unveiled major AI innovations across Adobe's product portfolio.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How did Nathan end up in product management from biology? <span class="faq-icon">▾</span></summary>
+      <p class="faq-a">Though a biology major at Stanford, Nathan took as many CS courses as possible. After graduating, he spent a decade writing code but discovered he loved influencing product direction and interacting with customers. Product management offered the perfect blend of technology and customer empathy — and he hasn't looked back since.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ── BOTTOM CTA ── -->
+<section class="bottom-cta">
+  <div class="bottom-cta-icon">NE</div>
+  <h2>The ultimate product and growth executive.</h2>
+  <p>With 20+ years of building digital experiences at scale, Nathan continues to push the frontier of what's possible at the intersection of product, AI, and human creativity.</p>
+  <p class="price-line">Senior Vice President · Adobe.com · San Jose, California</p>
+  <div class="bottom-cta-ctas">
+    <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="btn-blue">Connect on LinkedIn</a>
+    <a href="https://blog.adobe.com/authors/nathan-etter" target="_blank" class="btn-outline-blue" style="border-color:#2c2c2c;color:#2c2c2c;">Read Adobe Blog</a>
+  </div>
+</section>
+
+<!-- ── STICKY BOTTOM BAR ── -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-icon">NE</div>
+  <span class="sticky-name">Nathan Etter</span>
+  <span style="color:rgba(255,255,255,0.35);font-size:13px;display:none" id="sticky-title">SVP, Adobe.com</span>
+  <div class="sticky-bar-ctas">
+    <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="sticky-btn-ghost">View Profile</a>
+    <a href="https://www.linkedin.com/in/nathanetter/" target="_blank" class="sticky-btn-blue">Connect</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div style="display:flex;align-items:center;gap:10px">
+    <svg viewBox="0 0 100 77" width="24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M62.5 0H100V77L62.5 0Z" fill="#FA0F00"/>
+      <path d="M37.5 0H0V77L37.5 0Z" fill="#FA0F00"/>
+      <path d="M50 28.7L74.9 77H57.5L50.8 60H33.3L50 28.7Z" fill="#FA0F00"/>
+    </svg>
+    <span>Nathan Etter &nbsp;·&nbsp; SVP, Adobe.com &nbsp;·&nbsp; San Jose, CA</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/nathanetter/" target="_blank">LinkedIn</a>
+    <a href="https://blog.adobe.com/authors/nathan-etter" target="_blank">Adobe Blog</a>
+    <a href="https://www.marinemammalcenter.org/person/nathan-etter" target="_blank">Marine Mammal Center</a>
+    <a href="https://www.adobe.com" target="_blank">Adobe.com</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms of Use</a>
+  </div>
+</footer>
+
+<script>
+// ── Sticky bar ──
+const hero = document.querySelector('.hero');
+const stickyBar = document.getElementById('stickyBar');
+const heroObserver = new IntersectionObserver(([e]) => {
+  stickyBar.classList.toggle('visible', !e.isIntersecting);
+}, { threshold: 0.05 });
+heroObserver.observe(hero);
+
+// ── Plans tab switcher ──
+function switchTab(btn, id) {
+  document.querySelectorAll('.plans-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  ['tab-ind','tab-stu','tab-tea'].forEach(t => {
+    document.getElementById(t).style.display = t === id ? 'grid' : 'none';
+  });
+}
+
+// ── Active nav + breadcrumb ──
+const navSectionIds = ['overview','experience','skills','education','connect'];
+const sectionLabels = {
+  overview:   'Overview',
+  experience: 'Experience',
+  skills:     'Skills',
+  education:  'Career',
+  connect:    'Connect'
+};
+const navLinkMap = {};
+navSectionIds.forEach(id => {
+  const el = document.querySelector(`[data-section="${id}"]`);
+  if (el) navLinkMap[id] = el;
+});
+
+const bcSep     = document.getElementById('bcSep');
+const bcSection = document.getElementById('bcSection');
+
+function setActiveNav(id) {
+  // Nav tabs
+  Object.values(navLinkMap).forEach(a => a.classList.remove('active'));
+  if (navLinkMap[id]) navLinkMap[id].classList.add('active');
+
+  // Breadcrumb — hide subfolder on overview (root), show for all others
+  if (id === 'overview') {
+    bcSep.style.display = 'none';
+    bcSection.textContent = '';
+  } else {
+    bcSep.style.display = '';
+    bcSection.textContent = sectionLabels[id] || '';
+  }
+}
+
+setActiveNav('overview');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) setActiveNav(entry.target.id);
+  });
+}, {
+  rootMargin: '-88px 0px -55% 0px',
+  threshold: 0
+});
+
+navSectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) navObserver.observe(el);
+});
+
+// Update on click immediately
+Object.entries(navLinkMap).forEach(([id, a]) => {
+  a.addEventListener('click', () => setActiveNav(id));
+});
+</script>
+</body>
+</html>
